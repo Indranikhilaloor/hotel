@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:loginout/constants.dart';
 
 class Offers extends StatefulWidget {
   const Offers({Key? key}) : super(key: key);
@@ -12,6 +11,28 @@ class Offers extends StatefulWidget {
 class _OffersState extends State<Offers> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text('Offers'),
+        ),
+        automaticallyImplyLeading: false,
+        backgroundColor: Constants.buttonColor,
+        elevation: 0,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(height: 10),
+            Image.asset('assets/offers/first.jpeg'),
+            SizedBox(height: 20),
+            Image.asset('assets/offers/second.jpeg'),
+            SizedBox(height: 20),
+            Image.asset('assets/offers/third.jpeg'),
+          ],
+        ),
+      ),
+    );
   }
 }

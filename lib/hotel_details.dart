@@ -1,26 +1,38 @@
 //Working need to change a bit
 import 'package:flutter/material.dart';
+import 'package:loginout/constants.dart';
 
 class HotelDetailsPage extends StatelessWidget {
+  const HotelDetailsPage({
+    Key? key,
+    required this.image,
+    required this.hotelname,
+    required this.location,
+    required this.price,
+  }) : super(key: key);
+  final String image;
+  final String hotelname;
+  final String location;
+  final String price;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          Image.network(
-              'https://ak-d.tripcdn.com/images/0222f12000811q8364F04_R_550_412_R5_Q70_D.jpg'),
           SingleChildScrollView(
             padding: const EdgeInsets.only(top: 16.0, bottom: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                const SizedBox(height: 300),
+                Image.asset('$image'),
+                const SizedBox(height: 50),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
-                    "Senetta Hotel\nTiruvallur",
+                    "$hotelname\n$location",
                     style: TextStyle(
-                        color: Colors.purple,
+                        color: Constants.extraColor,
                         fontSize: 28.0,
                         fontWeight: FontWeight.bold),
                   ),
@@ -105,16 +117,17 @@ class HotelDetailsPage extends StatelessWidget {
                           Column(
                             children: <Widget>[
                               Text(
-                                "\$ 200",
+                                "\$ $price",
                                 style: TextStyle(
-                                    color: Colors.purple,
+                                    color: Constants.textColor,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20.0),
                               ),
                               Text(
                                 "/per night",
                                 style: TextStyle(
-                                    fontSize: 12.0, color: Colors.grey),
+                                    fontSize: 12.0,
+                                    color: Constants.kPrimaryColor),
                               )
                             ],
                           )
@@ -123,11 +136,11 @@ class HotelDetailsPage extends StatelessWidget {
                       const SizedBox(height: 30.0),
                       SizedBox(
                         width: double.infinity,
-                        child: RaisedButton(
+                        child: MaterialButton(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0)),
-                          color: Colors.purple,
-                          textColor: Colors.white,
+                          color: Constants.buttonColor,
+                          textColor: Constants.textColor,
                           child: Text(
                             "Book Now",
                             style: TextStyle(fontWeight: FontWeight.normal),
@@ -136,7 +149,9 @@ class HotelDetailsPage extends StatelessWidget {
                             vertical: 16.0,
                             horizontal: 32.0,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'payments');
+                          },
                         ),
                       ),
                       const SizedBox(height: 30.0),
@@ -171,11 +186,15 @@ class HotelDetailsPage extends StatelessWidget {
             right: 0,
             child: AppBar(
               backgroundColor: Colors.transparent,
+              automaticallyImplyLeading: false,
               elevation: 0,
               centerTitle: true,
               title: Text(
-                "DETAIL",
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.normal),
+                "HOTEL DETAILS",
+                style: TextStyle(
+                    color: Constants.textColor,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.normal),
               ),
             ),
           ),

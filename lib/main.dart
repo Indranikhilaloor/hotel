@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:loginout/payments.dart';
 import 'about.dart';
 import 'dashboard.dart';
 import 'start.dart';
@@ -28,15 +28,14 @@ class MyApp extends StatelessWidget {
       scrollBehavior: MyScrollBehaviour(),
       routes: {
         'settings': (context) => Setting(),
-        //'homepage': (context) => HomePage(),
         'dashboard': (context) => Dashboard(),
-        //'bottomNavigationBar': (context) => BottomBarNavigation(),
         'Login': (context) => Login(),
         'start': (context) => StartPage(),
         'Register': (context) => Register(),
         'profile': (context) => Profile(),
         'onboarding': (context) => Onbording(),
         'about': (context) => About(),
+        'payments': (context) => PaymentsPage(),
         'terms_and_conditions': (context) => Terms_and_conditions(),
       },
       home: Onbording(),

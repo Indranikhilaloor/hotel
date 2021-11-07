@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:loginout/dashboard.dart';
-import 'package:loginout/hotel_details.dart';
-import 'package:loginout/start.dart';
 import 'package:loginout/screens/home/home_screen.dart';
 import 'constants.dart';
 

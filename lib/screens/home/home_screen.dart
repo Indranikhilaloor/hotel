@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:loginout/constants.dart';
 import 'package:loginout/dashboard.dart';
 import 'package:loginout/offers.dart';
@@ -7,7 +6,7 @@ import 'package:loginout/settings.dart';
 import 'package:loginout/profile.dart';
 import 'package:loginout/screens/home/components/popular.dart';
 import 'package:loginout/screens/home/components/show_all.dart';
-import 'package:loginout/screens/home/components/upper_part.dart';
+import 'package:loginout/screens/home/components/header_with_search.dart';
 import 'package:loginout/screens/home/components/recomend_hotels.dart';
 
 class HomeScreen extends StatefulWidget {

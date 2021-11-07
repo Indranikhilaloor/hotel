@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'constants.dart';
-import 'Login.dart';
 
 class Onbording extends StatefulWidget {
   @override
@@ -144,11 +143,11 @@ Widget _pageindicators(BuildContext context, double width, Color color) {
 List<Map<String, String>> splashData = [
   {
     "text": "We are here to serve you at any time",
-    "image": "assets/anytime.jpg",
+    "image": "assets/anytime.jpeg",
   },
   {
     "text": "We take atmost care of our guests at stay",
-    "image": "assets/care.jpg"
+    "image": "assets/care.jpeg"
   },
   {"text": "Enjoy your stay with us", "image": "assets/enjoy_your_stay.jpeg"},
 ];
